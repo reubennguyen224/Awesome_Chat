@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "486771329353",
+    "project_id": "awesome-chat-60e1c",
+    "storage_bucket": "awesome-chat-60e1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486771329353:android:9d18a9329a3e904ae5f298",
+        "android_client_info": {
+          "package_name": "com.rikkei.training.morkproject.awesomechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "486771329353-vj50plv5rcrrq3l99qe4eja3mbqf0qnn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rikkei.training.morkproject.awesomechat",
+            "certificate_hash": "df8bda1db8dbd98595220f9e10c39dc0754aad2d"
+          }
+        },
+        {
+          "client_id": "486771329353-as7kkbsn9q5drdjg69nm0hdqii0l28a2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA64w56aJoRYRrvYUKTp6HDBcplhe9ptOo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "486771329353-as7kkbsn9q5drdjg69nm0hdqii0l28a2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
