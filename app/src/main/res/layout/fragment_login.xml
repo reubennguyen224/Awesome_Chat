@@ -13,18 +13,19 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="25dp"
         android:layout_marginTop="88dp"
+        android:contentDescription="Logo Application"
         android:clipToOutline="true"
         android:src="@drawable/logo_2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="226dp"
         android:gravity="top"
-        android:text="Trải nghiệm Awesome chat"
+        android:text="@string/LoginWelcome"
         android:textColor="#000000"
         android:textSize="26sp" />
 
@@ -133,7 +134,8 @@
         <TextView
             android:id="@+id/btnRegisterLogin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="106dp"
+            android:clickable="true"
             android:text="Đăng ký ngay"
             android:textColor="#4356B4"
             android:textSize="14sp" />

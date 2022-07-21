@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.rikkei.training.morkproject.awesomechat.Fragments.LoginFragment;
+import com.rikkei.training.morkproject.awesomechat.Fragments.RegisterFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -12,8 +13,6 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        if (getSupportActionBar() != null) getSupportActionBar().hide();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new LoginFragment()).addToBackStack("LoginFragment").commit();
     }

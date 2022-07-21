@@ -7,10 +7,11 @@
     tools:context=".Fragments.RegisterFragment">
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_height="wrap_content">
+        android:layout_alignParentTop="true">
 
         <ImageView
             android:id="@+id/btnBack"
@@ -146,6 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Đăng nhập ngay"
+            android:clickable="true"
             android:textColor="#4356B4"
             android:textSize="14sp" />
     </LinearLayout>
