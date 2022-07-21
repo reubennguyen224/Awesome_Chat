@@ -5,38 +5,134 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login">
-    
+
     <ImageView
         android:layout_width="124dp"
         android:layout_height="124dp"
-        android:src="@drawable/logo_2"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="57dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:clipToOutline="true"/>
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="57dp"
+        android:clipToOutline="true"
+        android:src="@drawable/logo_2" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trải nghiệm Awesome chat"
-        android:textColor="#000000"
-        android:textSize="26sp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="184dp"
-        android:gravity="top"/>
+        android:gravity="top"
+        android:text="Trải nghiệm Awesome chat"
+        android:textColor="#000000"
+        android:textSize="26sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="226dp"
         android:text="Đăng nhập"
         android:textColor="#4356B4"
-        android:textSize="32sp"
+        android:textSize="32sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmail"
+        style="@style/Widget.Design.TextInputLayout"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="312dp"
+        android:layout_marginRight="24dp"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtPassword"
+        style="@style/Widget.Design.TextInputLayout"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="399dp"
+        android:layout_marginRight="24dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btnForgot"
+        android:layout_width="103dp"
+        android:layout_height="17dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="226dp"/>
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="283dp"
+        android:layout_marginTop="469dp"
+        android:gravity="right|top"
+        android:text="Quên mật khẩu?"
+        android:textColor="#4356B4"
+        android:textSize="14sp" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogin"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="515dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/button"
+        android:enabled="false"
+        android:text="Đăng nhập"
+        android:textSize="16sp" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_below="@+id/btnLogin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chưa có tài khoản? "
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký ngay"
+            android:textColor="#4356B4"
+            android:textSize="14sp" />
+    </LinearLayout>
 
 </RelativeLayout>
