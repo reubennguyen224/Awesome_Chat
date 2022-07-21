@@ -68,4 +68,8 @@ public class LoginFragment extends Fragment {
 
         }
     }
+
+    void checkedLogin(){
+
+    }
 }
