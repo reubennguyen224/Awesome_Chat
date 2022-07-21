@@ -11,46 +11,46 @@
         android:layout_height="124dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="98dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="88dp"
+        android:contentDescription="Logo Application"
         android:clipToOutline="true"
         android:src="@drawable/logo_2" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="233dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="226dp"
         android:gravity="top"
-        android:text="Trải nghiệm Awesome chat"
+        android:text="@string/LoginWelcome"
         android:textColor="#000000"
         android:textSize="26sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="279dp"
-        android:text="Đăng nhập"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="273dp"
+        android:text="@string/LoginScreen"
         android:textColor="#4356B4"
         android:textSize="32sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtEmail"
         style="@style/Widget.Design.TextInputLayout"
-        android:layout_width="368dp"
+        android:layout_width="363dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="369dp"
-        android:layout_marginEnd="21dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="23dp"
         app:endIconMode="custom">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -63,21 +63,20 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtPassword"
         style="@style/Widget.Design.TextInputLayout"
-        android:layout_width="363dp"
+        android:layout_width="366dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="25dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="446dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginRight="22dp">
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginRight="24dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="364dp"
+            android:layout_height="43dp"
             android:hint="MẬT KHẨU"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -86,10 +85,11 @@
         android:id="@+id/btnForgot"
         android:layout_width="103dp"
         android:layout_height="17dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="287dp"
-        android:layout_marginTop="522dp"
+        android:layout_below="@+id/txtPassword"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="287dp"
+        android:layout_marginTop="10dp"
         android:gravity="right|top"
         android:text="Quên mật khẩu?"
         android:textColor="#4356B4"
@@ -99,46 +99,48 @@
         android:id="@+id/btnLogin"
         android:layout_width="326dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="547dp"
-        android:layout_marginRight="20dp"
+        android:layout_below="@+id/btnForgot"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="22dp"
         android:background="@drawable/button"
         android:enabled="false"
-        android:text="Đăng nhập"
+        android:text="@string/LoginScreen"
         android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="105dp"
+        android:layout_height="92dp"
         android:layout_below="@+id/btnLogin"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="145dp"
-        android:layout_marginRight="98dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="55dp"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="36dp"
             android:text="Chưa có tài khoản? "
             android:textColor="#999999"
             android:textSize="14sp" />
 
         <TextView
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnRegisterLogin"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="106dp"
             android:clickable="true"
+            android:focusable="true"
             android:text="Đăng ký ngay"
             android:textColor="#4356B4"
             android:textSize="14sp" />
     </LinearLayout>
-
 
 </RelativeLayout>

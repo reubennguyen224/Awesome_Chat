@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.rikkei.training.morkproject.awesomechat.Fragments.LoginFragment;
-import com.rikkei.training.morkproject.awesomechat.Fragments.RegisterFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
