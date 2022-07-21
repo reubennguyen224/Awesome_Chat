@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.RegisterFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_button" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Đăng ký"
+        android:textSize="32sp"
+        android:textColor="#4356B4"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="100dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtFullName"
+        style="@style/Widget.Design.TextInputLayout"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="21dp"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="HỌ VÀ TÊN"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmailRegis"
+        style="@style/Widget.Design.TextInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="279dp"
+        android:layout_marginEnd="21dp"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="EMAIL"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtEmail"
+        style="@style/Widget.Design.TextInputLayout"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="21dp"
+        app:endIconMode="custom">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="MẬT KHẨU"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomCheckbox"
+        android:text="  Tôi đồng ý với các"
+        android:textSize="15sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#999999"
+        android:layout_marginTop="415dp"
+        android:layout_marginLeft="27dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="326dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="526dp"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/button"
+        android:text="Đăng ký"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="215dp"
+        android:layout_below="@+id/btnRegister"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="95dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đã tài khoản? "
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnLoginReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng nhập ngay"
+            android:textColor="#4356B4"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Fragments.LoginFragment">
 
     <ImageView
         android:layout_width="124dp"
         android:layout_height="124dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="98dp"
         android:clipToOutline="true"
         android:src="@drawable/logo_2" />
 
@@ -22,7 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="184dp"
+        android:layout_marginTop="233dp"
         android:gravity="top"
         android:text="Trải nghiệm Awesome chat"
         android:textColor="#000000"
@@ -34,7 +34,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="226dp"
+        android:layout_marginTop="279dp"
         android:text="Đăng nhập"
         android:textColor="#4356B4"
         android:textSize="32sp" />
@@ -42,20 +42,21 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtEmail"
         style="@style/Widget.Design.TextInputLayout"
-        android:layout_width="363dp"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="312dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="21dp"
         app:endIconMode="custom">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
+            android:hint="EMAIL"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -66,15 +67,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="399dp"
-        android:layout_marginRight="24dp">
+        android:layout_marginTop="446dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mật khẩu"
+            android:hint="MẬT KHẨU"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,8 +88,8 @@
         android:layout_height="17dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="283dp"
-        android:layout_marginTop="469dp"
+        android:layout_marginLeft="287dp"
+        android:layout_marginTop="522dp"
         android:gravity="right|top"
         android:text="Quên mật khẩu?"
         android:textColor="#4356B4"
@@ -98,9 +102,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="515dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="547dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/button"
         android:enabled="false"
         android:text="Đăng nhập"
@@ -108,15 +112,15 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="31dp"
+        android:layout_height="105dp"
         android:layout_below="@+id/btnLogin"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="101dp"
-        android:layout_marginTop="98dp"
-        android:layout_marginRight="100dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="145dp"
+        android:layout_marginRight="98dp"
+        android:layout_marginBottom="57dp"
         android:orientation="horizontal">
 
         <TextView
@@ -134,5 +138,6 @@
             android:textColor="#4356B4"
             android:textSize="14sp" />
     </LinearLayout>
+
 
 </RelativeLayout>
