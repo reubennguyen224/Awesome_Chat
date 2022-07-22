@@ -7,11 +7,14 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable-v24/ic_message_unchoosing.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable-v24/ic_personal_choosing.xml" value="0.1" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/background_bottom_navigation.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable-v24/search_bar_background.xml" value="0.164" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/background_bottom_navigation.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/background_container.xml" value="0.164" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/background_splash.xml" value="0.187" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/bottom_navigation_color_selector.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/button.xml" value="0.177" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/checkbox_selector.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/ic_back_button.xml" value="0.164" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/ic_checkbox.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/ic_friend.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/ic_friends.xml" value="0.1" />
@@ -26,7 +29,8 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/activity_home.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/custom_toolbar_1.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_login.xml" value="0.228921124206709" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />

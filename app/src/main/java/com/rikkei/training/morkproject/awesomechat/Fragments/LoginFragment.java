@@ -40,6 +40,10 @@ public class LoginFragment extends Fragment {
 
         txtPassword.getEditText().addTextChangedListener(new CustomTextListener());
 
+        btnLogin.setOnClickListener(v -> {
+            getFragmentManager().beginTransaction().replace(R.id.home_container, new HomeFragment()).addToBackStack("HomeFragment").commit();
+        });
+
         return view;
     }
 
