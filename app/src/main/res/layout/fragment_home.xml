@@ -14,11 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="800dp"
         android:layout_above="@+id/background_bottom_navigation"
-        android:layout_marginTop="190dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/background_container">
+        android:layout_marginTop="190dp">
 
     </FrameLayout>
 
@@ -34,15 +33,15 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="58dp"
-        android:elevation="8dp"
         android:background="@drawable/background_bottom_navigation"
+        android:elevation="8dp"
         app:itemIconTint="@drawable/bottom_navigation_color_selector"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_navigation_menu"/>
+        app:menu="@menu/bottom_navigation_menu" />
 </RelativeLayout>
