@@ -24,6 +24,10 @@ public class User implements Serializable {
         this.dob = "01/01/1999"; //ngay sinh mac dinh
     }
 
+    public User(String fullName){
+        this.fullName = fullName;
+    }
+
     public int getId() {
         return id;
     }

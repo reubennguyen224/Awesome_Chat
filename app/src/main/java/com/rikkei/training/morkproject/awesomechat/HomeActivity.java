@@ -13,6 +13,6 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new LoginFragment()).addToBackStack("LoginFragment").commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.home_container, new LoginFragment(this)).addToBackStack("LoginFragment").commit();
     }
 }

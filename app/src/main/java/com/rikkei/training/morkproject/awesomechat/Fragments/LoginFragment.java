@@ -1,5 +1,6 @@
 package com.rikkei.training.morkproject.awesomechat.Fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -19,9 +20,14 @@ import com.rikkei.training.morkproject.awesomechat.R;
 public class LoginFragment extends Fragment {
 
     View view;
+    Context context;
     TextView btnRegisterLog, btnForgot;
     MaterialButton btnLogin;
     TextInputLayout txtEmail, txtPassword;
+    public LoginFragment(){}
+    public LoginFragment(Context context){
+        this.context = context;
+    }
 
     @Nullable
     @Override
@@ -34,14 +40,14 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 assert getFragmentManager() != null;
-                getFragmentManager().beginTransaction().replace(R.id.home_container, new RegisterFragment()).addToBackStack("RegisterFragment").commit();
+                getFragmentManager().beginTransaction().replace(R.id.home_container, new RegisterFragment(context)).addToBackStack("RegisterFragment").commit();
             }
         });
 
         txtPassword.getEditText().addTextChangedListener(new CustomTextListener());
 
         btnLogin.setOnClickListener(v -> {
-            getFragmentManager().beginTransaction().replace(R.id.home_container, new HomeFragment()).addToBackStack("HomeFragment").commit();
+            getFragmentManager().beginTransaction().replace(R.id.home_container, new HomeFragment(context)).addToBackStack("HomeFragment").commit();
         });
 
         return view;
