@@ -1,5 +1,6 @@
 package com.rikkei.training.morkproject.awesomechat.Fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -48,6 +49,7 @@ public class HomeFragment extends Fragment {
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener(){
+        @SuppressLint("NonConstantResourceId")
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment;
@@ -56,6 +58,7 @@ public class HomeFragment extends Fragment {
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.friend_view:
+                    getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.personal_view:
                     return true;

@@ -4,24 +4,26 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
     tools:context=".Fragments.HomeFragment">
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-        android:background="@drawable/background_splash"/>
+        android:layout_height="250dp"
+        android:background="@drawable/background_splash" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@null">
+        android:background="@android:color/transparent">
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@null">
+            android:background="@android:color/transparent">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
 
                 <TextView
                     android:id="@+id/toolbar_title"
@@ -46,26 +48,19 @@
                     android:layout_marginEnd="12dp"
                     android:layout_toEndOf="@+id/toolbar_title"
                     android:src="@drawable/ic_create_message" />
+                <SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/search_bar_background"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginTop="115dp"
+                    android:queryHint="Tìm kiếm tin nhắn"/>
 
             </RelativeLayout>
         </com.google.android.material.appbar.MaterialToolbar>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null">
-            <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/search_bar_background"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="13dp"
-                android:layout_marginEnd="11dp"
-                android:layout_marginTop="24dp"
-                android:queryHint="Tìm kiếm tin nhắn"/>
-
-        </RelativeLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout

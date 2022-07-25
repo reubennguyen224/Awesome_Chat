@@ -34,7 +34,14 @@ public class RegisterFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_register, container, false);
         Init();
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        toolbar.setTitle(null);
 
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager().beginTransaction().replace(R.id.home_container, new LoginFragment(context)).addToBackStack("Login").commit();
+            }
+        });
 
         btnLoginReg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,5 +61,7 @@ public class RegisterFragment extends Fragment {
         btnLoginReg = view.findViewById(R.id.btnLoginReg);
         btnBack = view.findViewById(R.id.btnBack);
     }
+
+
 
 }
