@@ -17,6 +17,8 @@ import com.rikkei.training.morkproject.awesomechat.R;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyHolder> {
 
     Context context;
@@ -48,7 +50,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyHolder
     public static class MyHolder extends RecyclerView.ViewHolder {
 
         TextView tv_ten_banbe, tv_tgian_tin_cuoi, tv_tin_cuoi;
-        ImageView img_avatar;
+        CircleImageView img_avatar;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
             img_avatar = itemView.findViewById(R.id.img_avatar);

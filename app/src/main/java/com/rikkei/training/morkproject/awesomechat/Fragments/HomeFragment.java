@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.friend_view:
-                    getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendFragment(context)).addToBackStack(null).commit();
+                    getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendListFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.personal_view:
                     return true;

@@ -14,16 +14,19 @@
         android:layout_height="60dp">
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/friend_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bạn bè" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/all_friend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tất cả" />
 
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/friend_request"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Yêu cầu" />
