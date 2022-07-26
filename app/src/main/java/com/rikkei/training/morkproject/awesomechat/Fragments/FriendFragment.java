@@ -34,7 +34,7 @@ public class FriendFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_child_message, container, false);
+        view = inflater.inflate(R.layout.fragment_child_friend_list, container, false);
         Init();
 
         ArrayList<User> arrayList = new ArrayList<>();
@@ -57,6 +57,6 @@ public class FriendFragment extends Fragment {
     }
 
     void Init(){
-        recyclerView = view.findViewById(R.id.recycler_message);
+        recyclerView = view.findViewById(R.id.recycler_friend_list);
     }
 }
