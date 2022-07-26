@@ -8,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import androidx.annotation.DrawableRes;
@@ -34,6 +36,9 @@ public class HomeFragment extends Fragment {
     Toolbar toolbar;
     TextView title;
     Context context;
+    SearchView searchView;
+
+    FrameLayout fragment_container;
     ImageView img_icon;
 
     public HomeFragment(){}
@@ -64,15 +69,26 @@ public class HomeFragment extends Fragment {
                     res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_create_message", null, getActivity().getPackageName()));
                     img_icon.setImageDrawable(res);
                     title.setText("Tin nhắn");
+                    title.setVisibility(View.VISIBLE);
+                    img_icon.setVisibility(View.VISIBLE);
+                    searchView.setVisibility(View.VISIBLE);
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.friend_view:
                     title.setText("Bạn bè   ");
+                    title.setVisibility(View.VISIBLE);
+                    img_icon.setVisibility(View.VISIBLE);
+                    searchView.setVisibility(View.VISIBLE);
                     res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_add_friend", null, getActivity().getPackageName()));
                     img_icon.setImageDrawable(res);
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendListFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.personal_view:
+                    fragment_container.layout(0,283,0,0);
+                    title.setVisibility(View.GONE);
+                    img_icon.setVisibility(View.GONE);
+                    searchView.setVisibility(View.GONE);
+                    getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new PersonalFragment(context)).addToBackStack(null).commit();
                     return true;
             }
 
@@ -86,6 +102,8 @@ public class HomeFragment extends Fragment {
         toolbar = view.findViewById(R.id.toolbar);
         title = view.findViewById(R.id.toolbar_title);
         img_icon = view.findViewById(R.id.img_icon);
+        searchView = view.findViewById(R.id.search_toolbar);
+        fragment_container = view.findViewById(R.id.fragment_container);
     }
 
 
