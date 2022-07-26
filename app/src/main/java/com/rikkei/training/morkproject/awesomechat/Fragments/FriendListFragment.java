@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.badge.BadgeUtils;
@@ -20,6 +22,8 @@ public class FriendListFragment extends Fragment {
 
     Context context;
     View view;
+    Toolbar toolbar;
+    TextView title;
     TabLayout tabLayout;
 
     public FriendListFragment(Context context) {
@@ -51,8 +55,8 @@ public class FriendListFragment extends Fragment {
                 case R.id.all_friend:
                     break;
                 case R.id.friend_list:
-                    getChildFragmentManager().beginTransaction().replace(R.id.friend_container, new FriendFragment(context)).commit();
-                    break;
+                    getChildFragmentManager().beginTransaction().replace(R.id.friend_container, new FriendFragment(context)).addToBackStack(null).commit();
+                    return;
                 case R.id.friend_request:
                     break;
 

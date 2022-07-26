@@ -2,12 +2,16 @@ package com.rikkei.training.morkproject.awesomechat.Fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -28,7 +32,9 @@ public class HomeFragment extends Fragment {
     BottomNavigationView nav_bottom;
     RecyclerView recyclerView;
     Toolbar toolbar;
+    TextView title;
     Context context;
+    ImageView img_icon;
 
     public HomeFragment(){}
     public HomeFragment(Context context){
@@ -49,15 +55,21 @@ public class HomeFragment extends Fragment {
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener(){
-        @SuppressLint("NonConstantResourceId")
+        @SuppressLint({"NonConstantResourceId", "UseCompatLoadingForDrawables"})
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
+            Drawable res;
             switch (item.getItemId()){
                 case R.id.message_view:
+                    res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_create_message", null, getActivity().getPackageName()));
+                    img_icon.setImageDrawable(res);
+                    title.setText("Tin nhắn");
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.friend_view:
+                    title.setText("Bạn bè  ");
+                    res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_add_friend", null, getActivity().getPackageName()));
+                    img_icon.setImageDrawable(res);
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendListFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.personal_view:
@@ -71,6 +83,9 @@ public class HomeFragment extends Fragment {
     void init(){
         nav_bottom = view.findViewById(R.id.nav_bottom);
         recyclerView = view.findViewById(R.id.recycler_message);
+        toolbar = view.findViewById(R.id.toolbar);
+        title = view.findViewById(R.id.toolbar_title);
+        img_icon = view.findViewById(R.id.img_icon);
     }
 
 
