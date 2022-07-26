@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rikkei.training.morkproject.awesomechat.BuildConfig;
 import com.rikkei.training.morkproject.awesomechat.R;
 
@@ -22,9 +23,18 @@ public class PersonalFragment extends Fragment {
     Context context;
     TextView tv_version_number;
     ImageView btn_update_profile;
+    BottomNavigationView navBottom;
 
     public PersonalFragment(Context context) {
         this.context = context;
+    }
+
+    public PersonalFragment() {
+    }
+
+    public PersonalFragment(Context context, BottomNavigationView navBottom) {
+        this.context = context;
+        this.navBottom = navBottom;
     }
 
     @Nullable
@@ -38,7 +48,8 @@ public class PersonalFragment extends Fragment {
         btn_update_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.home_container, new UpdateInformationFragment(context)).addToBackStack(null).commit();
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_3, new UpdateInformationFragment(context)).addToBackStack(null).commit();
+                navBottom.setVisibility(View.INVISIBLE);
             }
         });
         return view;
@@ -47,5 +58,6 @@ public class PersonalFragment extends Fragment {
     void Init(){
         btn_update_profile = view.findViewById(R.id.btn_update_profile);
         tv_version_number = view.findViewById(R.id.tv_version_number);
+        navBottom.setVisibility(View.VISIBLE);
     }
 }

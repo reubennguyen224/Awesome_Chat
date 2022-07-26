@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
 
     View view;
     BottomNavigationView nav_bottom;
-    RelativeLayout block_personal;
+    RelativeLayout block_personal, block_special;
     RecyclerView recyclerView;
     Toolbar toolbar;
     TextView title;
@@ -94,10 +94,9 @@ public class HomeFragment extends Fragment {
                     img_icon.setVisibility(View.GONE);
                     searchView.setVisibility(View.GONE);
 
-                    getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new PersonalFragment(context)).addToBackStack(null).commit();
+                    getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new PersonalFragment(context, nav_bottom)).addToBackStack(null).commit();
                     return true;
             }
-
             return false;
         }
     };
@@ -111,8 +110,17 @@ public class HomeFragment extends Fragment {
         searchView = view.findViewById(R.id.search_toolbar);
         fragment_container = view.findViewById(R.id.fragment_container);
         block_personal = view.findViewById(R.id.block_personal);
+        block_special = view.findViewById(R.id.block_special);
+
         block_personal.setVisibility(View.GONE);
+
     }
 
+    public BottomNavigationView getNav_bottom() {
+        return nav_bottom;
+    }
 
+    public void setNav_bottom(BottomNavigationView nav_bottom) {
+        this.nav_bottom = nav_bottom;
+    }
 }
