@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.friend_view:
-                    title.setText("Bạn bè  ");
+                    title.setText("Bạn bè   ");
                     res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_add_friend", null, getActivity().getPackageName()));
                     img_icon.setImageDrawable(res);
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendListFragment(context)).addToBackStack(null).commit();
