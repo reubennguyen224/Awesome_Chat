@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,6 +21,7 @@ public class PersonalFragment extends Fragment {
     View view;
     Context context;
     TextView tv_version_number;
+    ImageView btn_update_profile;
 
     public PersonalFragment(Context context) {
         this.context = context;
@@ -32,10 +34,18 @@ public class PersonalFragment extends Fragment {
         Init();
 
         tv_version_number.setText(BuildConfig.VERSION_NAME);
+
+        btn_update_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getParentFragmentManager().beginTransaction().replace(R.id.home_container, new UpdateInformationFragment(context)).addToBackStack(null).commit();
+            }
+        });
         return view;
     }
 
     void Init(){
+        btn_update_profile = view.findViewById(R.id.btn_update_profile);
         tv_version_number = view.findViewById(R.id.tv_version_number);
     }
 }

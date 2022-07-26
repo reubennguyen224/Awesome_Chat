@@ -44,16 +44,18 @@
             android:layout_toEndOf="@+id/avatar_profile"
             android:layout_marginStart="16dp"
             android:textColor="#999999"/>
+
         <ImageView
+            android:id="@+id/btn_update_profile"
             android:layout_width="18dp"
             android:layout_height="18dp"
-            android:src="@drawable/ic_pencil"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="42dp"
             android:layout_marginEnd="15dp"
             android:clickable="true"
-            android:focusable="true" />
+            android:focusable="true"
+            android:src="@drawable/ic_pencil" />
 
         <View
             android:id="@+id/break_line"
