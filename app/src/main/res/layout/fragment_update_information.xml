@@ -79,6 +79,14 @@
             android:layout_marginTop="50dp"
             android:layout_marginEnd="104dp"
             android:background="@drawable/background_avatar" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_button_camera"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="160dp"/>
 
     </RelativeLayout>
 </RelativeLayout>
