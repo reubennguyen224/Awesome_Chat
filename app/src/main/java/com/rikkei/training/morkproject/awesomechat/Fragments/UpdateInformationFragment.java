@@ -20,16 +20,19 @@ public class UpdateInformationFragment extends Fragment {
     View view;
     Context context;
     ImageView btn_back, btn_change_avatar;
+    BottomNavigationView navBottom;
     TextView btn_save;
 
 
     public UpdateInformationFragment() {
     }
 
-    public UpdateInformationFragment(Context context) {
-        this.context = context;
-    }
 
+
+    public UpdateInformationFragment(Context context, BottomNavigationView navBottom) {
+        this.context = context;
+        this.navBottom = navBottom;
+    }
 
     @Nullable
     @Override
@@ -53,6 +56,8 @@ public class UpdateInformationFragment extends Fragment {
 
     private View.OnClickListener imgListener = v -> {
         //bat su kien quay lai
+        getFragmentManager().popBackStack();
+        navBottom.setVisibility(View.VISIBLE);
     };
 
     private View.OnClickListener txtListenner = v -> {

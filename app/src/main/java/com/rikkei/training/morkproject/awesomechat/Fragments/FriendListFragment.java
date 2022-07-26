@@ -40,6 +40,7 @@ public class FriendListFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_child_friend, container, false);
         Init();
         tabLayout.addOnTabSelectedListener(onTabSelectedListener);
+        getChildFragmentManager().beginTransaction().replace(R.id.friend_container, new FriendFragment(context)).addToBackStack(null).commit();
 
         return view;
     }
@@ -52,13 +53,13 @@ public class FriendListFragment extends Fragment {
         @SuppressLint("NonConstantResourceId")
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
-            switch (tab.getId()){
-                case R.id.all_friend:
+            switch (tab.getPosition()){
+                case 1:
                     break;
-                case R.id.friend_list:
+                case 0:
                     getChildFragmentManager().beginTransaction().replace(R.id.friend_container, new FriendFragment(context)).addToBackStack(null).commit();
                     return;
-                case R.id.friend_request:
+                case 2:
                     break;
 
             }

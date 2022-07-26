@@ -48,7 +48,7 @@ public class PersonalFragment extends Fragment {
         btn_update_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_3, new UpdateInformationFragment(context)).addToBackStack(null).commit();
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container_3, new UpdateInformationFragment(context, navBottom)).addToBackStack(null).commit();
                 navBottom.setVisibility(View.INVISIBLE);
             }
         });
