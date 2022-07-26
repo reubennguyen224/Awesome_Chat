@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.rikkei.training.morkproject.awesomechat.Adapter.AllFriendAdapter;
 import com.rikkei.training.morkproject.awesomechat.Adapter.FriendAdapter;
 import com.rikkei.training.morkproject.awesomechat.Model.User;
 import com.rikkei.training.morkproject.awesomechat.R;
@@ -51,7 +52,7 @@ public class AllFriendFragment extends Fragment {
         arrayList.add(new User("Nuhn Van A"));
         arrayList.add(new User("Tin Van A"));
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        recyclerView.setAdapter(new FriendAdapter(context, arrayList));
+        recyclerView.setAdapter(new AllFriendAdapter(context, arrayList));
 
         return view;
     }

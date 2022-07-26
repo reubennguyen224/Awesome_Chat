@@ -55,6 +55,7 @@ public class FriendListFragment extends Fragment {
         public void onTabSelected(TabLayout.Tab tab) {
             switch (tab.getPosition()){
                 case 1:
+                    getChildFragmentManager().beginTransaction().replace(R.id.friend_container, new AllFriendFragment(context)).addToBackStack(null).commit();
                     break;
                 case 0:
                     getChildFragmentManager().beginTransaction().replace(R.id.friend_container, new FriendFragment(context)).addToBackStack(null).commit();
