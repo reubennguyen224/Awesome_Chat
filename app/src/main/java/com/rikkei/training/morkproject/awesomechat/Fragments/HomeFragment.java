@@ -56,14 +56,7 @@ public class HomeFragment extends Fragment {
 
         getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack("message").commit();
 
-        searchView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //callBlock();
-                block_personal.setVisibility(View.VISIBLE);
-                getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new SearchMessageFragment(context)).addToBackStack(null).commit();
-            }
-        });
+        searchView.setOnClickListener(searchListener);
 
         nav_bottom.setItemHorizontalTranslationEnabled(true);
         nav_bottom.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
@@ -113,8 +106,11 @@ public class HomeFragment extends Fragment {
     private RelativeLayout.OnClickListener searchListener = new RelativeLayout.OnClickListener() {
         @Override
         public void onClick(View v) {
+            block_personal.setVisibility(View.VISIBLE);
             if (id_nav == 1){
                 getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new SearchMessageFragment(context)).addToBackStack(null).commit();
+            } else if (id_nav == 2){
+                getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new SearchFriendFragment(context)).addToBackStack(null).commit();
             }
         }
     };
