@@ -25,6 +25,8 @@ public class AllFriendAdapter extends RecyclerView.Adapter<AllFriendAdapter.MyHo
 
     Context context;
     ArrayList<User> arrayList;
+    private final int SHOW_MENU = 1;
+    private final int HIDE_MENU = 2;
 
     public AllFriendAdapter(Context context, ArrayList<User> arrayList) {
         this.context = context;
@@ -34,7 +36,16 @@ public class AllFriendAdapter extends RecyclerView.Adapter<AllFriendAdapter.MyHo
     @NonNull
     @Override
     public MyHolderView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new MyHolderView(LayoutInflater.from(context).inflate(R.layout.item_recyclerview_3, parent, false));
+        View v;
+        if (viewType == SHOW_MENU){
+            v = LayoutInflater.from(context).inflate(R.layout.item_recyclerview_3, parent, false);
+            return new MyHolderView(v);
+        } else{
+            v = LayoutInflater.from(context).inflate(R.layout.item_recyclerview_3, parent, false);
+            return new MyHolderView(v);
+        }
+
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
