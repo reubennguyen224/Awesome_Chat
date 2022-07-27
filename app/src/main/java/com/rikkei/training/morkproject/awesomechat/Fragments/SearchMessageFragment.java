@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ public class SearchMessageFragment extends Fragment {
     View view;
     Context context;
     TextView btn_cancel;
+    RelativeLayout block_no_results;
 
     public SearchMessageFragment() {
     }
@@ -33,12 +35,17 @@ public class SearchMessageFragment extends Fragment {
 
         init();
 
-        btn_cancel.setOnClickListener(v -> getFragmentManager().popBackStack());
+        btn_cancel.setOnClickListener(v -> {
+            getFragmentManager().popBackStack();
+        });
 
         return view;
     }
 
     void init(){
         btn_cancel = view.findViewById(R.id.btn_cancel_search_message);
+        block_no_results  = view.findViewById(R.id.block_no_results);
+
+        block_no_results.setVisibility(View.GONE);
     }
 }

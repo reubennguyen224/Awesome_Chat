@@ -33,12 +33,12 @@ public class HomeFragment extends Fragment {
 
     View view;
     BottomNavigationView nav_bottom;
-    RelativeLayout block_personal, block_special;
+    RelativeLayout block_personal, block_special, searchView;
     RecyclerView recyclerView;
     Toolbar toolbar;
-    TextView title;
+    TextView title, search_title;
     Context context;
-    SearchView searchView;
+    int id_nav = 1;
 
     FrameLayout fragment_container;
     ImageView img_icon;
@@ -56,9 +56,24 @@ public class HomeFragment extends Fragment {
 
         getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack("message").commit();
 
+        searchView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //callBlock();
+                block_personal.setVisibility(View.VISIBLE);
+                getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new SearchMessageFragment(context)).addToBackStack(null).commit();
+            }
+        });
+
         nav_bottom.setItemHorizontalTranslationEnabled(true);
         nav_bottom.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        hideBlock();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener(){
@@ -68,32 +83,26 @@ public class HomeFragment extends Fragment {
             Drawable res;
             switch (item.getItemId()){
                 case R.id.message_view:
-                    block_personal.setVisibility(View.GONE);
                     res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_create_message", null, getActivity().getPackageName()));
                     img_icon.setImageDrawable(res);
                     title.setText("Tin nhắn");
-                    title.setVisibility(View.VISIBLE);
-                    img_icon.setVisibility(View.VISIBLE);
-                    searchView.setVisibility(View.VISIBLE);
+                    hideBlock();
+                    search_title.setText("Tìm kiếm tin nhắn...");
+                    id_nav = 1;
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new MessageFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.friend_view:
-                    block_personal.setVisibility(View.GONE);
+                    hideBlock();
                     title.setText("Bạn bè   ");
-                    title.setVisibility(View.VISIBLE);
-                    img_icon.setVisibility(View.VISIBLE);
-                    searchView.setVisibility(View.VISIBLE);
+                    search_title.setText("Tìm kiếm bạn bè...");
                     res = getResources().getDrawable(getResources().getIdentifier("@drawable/ic_add_friend", null, getActivity().getPackageName()));
                     img_icon.setImageDrawable(res);
+                    id_nav = 2;
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container, new FriendListFragment(context)).addToBackStack(null).commit();
                     return true;
                 case R.id.personal_view:
-                    block_personal.setVisibility(View.VISIBLE);
-
-                    title.setVisibility(View.GONE);
-                    img_icon.setVisibility(View.GONE);
-                    searchView.setVisibility(View.GONE);
-
+                    callBlock();
+                    id_nav = 3;
                     getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new PersonalFragment(context, nav_bottom)).addToBackStack(null).commit();
                     return true;
             }
@@ -101,14 +110,29 @@ public class HomeFragment extends Fragment {
         }
     };
 
-    private View.OnClickListener searchListener = new View.OnClickListener() {
+    private RelativeLayout.OnClickListener searchListener = new RelativeLayout.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (nav_bottom.getSelectedItemId() == R.id.message_view){
+            if (id_nav == 1){
                 getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new SearchMessageFragment(context)).addToBackStack(null).commit();
             }
         }
     };
+
+    void callBlock(){
+        block_personal.setVisibility(View.VISIBLE);
+
+        title.setVisibility(View.GONE);
+        img_icon.setVisibility(View.GONE);
+        searchView.setVisibility(View.GONE);
+    }
+
+    public void hideBlock(){
+        block_personal.setVisibility(View.GONE);
+        title.setVisibility(View.VISIBLE);
+        img_icon.setVisibility(View.VISIBLE);
+        searchView.setVisibility(View.VISIBLE);
+    }
 
     void init(){
         nav_bottom = view.findViewById(R.id.nav_bottom);
@@ -116,11 +140,11 @@ public class HomeFragment extends Fragment {
         toolbar = view.findViewById(R.id.toolbar);
         title = view.findViewById(R.id.toolbar_title);
         img_icon = view.findViewById(R.id.img_icon);
-        searchView = view.findViewById(R.id.search_toolbar);
+        searchView = view.findViewById(R.id.search);
         fragment_container = view.findViewById(R.id.fragment_container);
         block_personal = view.findViewById(R.id.block_personal);
         block_special = view.findViewById(R.id.block_special);
-
+        search_title = view.findViewById(R.id.searchbar_title);
         block_personal.setVisibility(View.GONE);
 
     }
