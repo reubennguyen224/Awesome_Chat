@@ -52,7 +52,8 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="23dp"
-        app:endIconMode="custom">
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_mail">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -64,7 +65,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtPassword"
         style="@style/Widget.Design.TextInputLayout"
-        android:layout_width="366dp"
+        android:layout_width="363dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtEmail"
         android:layout_alignParentStart="true"
@@ -73,11 +74,13 @@
         android:layout_marginLeft="24dp"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginRight="24dp">
+        android:layout_marginRight="24dp"
+        app:endIconDrawable="@drawable/ic_key"
+        app:endIconMode="custom">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="364dp"
-            android:layout_height="43dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>

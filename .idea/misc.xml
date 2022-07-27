@@ -35,6 +35,7 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/ic_untitled.xml" value="0.1885" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/paper_plane.xml" value="0.111" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/drawable/temp.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout-v28/fragment_login.xml" value="0.24094202898550723" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout-v31/activity_login.xml" value="0.2830269345874305" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout-v31/fragment_login.xml" value="0.2830269345874305" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout-v31/fragment_search_friend.xml" value="0.24094202898550723" />
@@ -48,7 +49,7 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_child_friend_list.xml" value="0.2830269345874305" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_child_message.xml" value="0.2821718683197948" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_home.xml" value="0.33" />
-        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_message_2_user.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_personal.xml" value="0.2821718683197948" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/AwesomeChat/app/src/main/res/layout/fragment_register.xml" value="0.33" />
