@@ -44,24 +44,25 @@
 
         <SearchView
             android:id="@+id/search_toolbar"
-            android:layout_width="match_parent"
+            android:layout_width="311dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="155dp"
-            android:layout_marginEnd="100dp"
             android:background="@drawable/search_bar_background"
             android:queryHint="Tìm kiếm tin nhắn" />
 
         <TextView
+            android:id="@+id/btn_cancel_search_message"
             android:layout_width="30dp"
-            android:layout_height="19dp"
+            android:layout_height="20dp"
             android:text="Huỷ"
             android:textColor="@color/white"
             android:layout_toEndOf="@id/search_toolbar"
             android:layout_below="@id/img_icon"
-            android:textSize="16sp"
+            android:textSize="17sp"
+            android:layout_marginTop="33dp"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"/>

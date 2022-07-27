@@ -101,6 +101,15 @@ public class HomeFragment extends Fragment {
         }
     };
 
+    private View.OnClickListener searchListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            if (nav_bottom.getSelectedItemId() == R.id.message_view){
+                getChildFragmentManager().beginTransaction().replace(R.id.fragment_container_2, new SearchMessageFragment(context)).addToBackStack(null).commit();
+            }
+        }
+    };
+
     void init(){
         nav_bottom = view.findViewById(R.id.nav_bottom);
         recyclerView = view.findViewById(R.id.recycler_message);
