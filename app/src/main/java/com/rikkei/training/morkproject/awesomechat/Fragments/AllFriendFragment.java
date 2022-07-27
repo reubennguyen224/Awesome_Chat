@@ -15,11 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.rikkei.training.morkproject.awesomechat.Adapter.AllFriendAdapter;
 import com.rikkei.training.morkproject.awesomechat.Adapter.FriendAdapter;
 import com.rikkei.training.morkproject.awesomechat.Model.User;
+import com.rikkei.training.morkproject.awesomechat.OnUserClickedListener;
 import com.rikkei.training.morkproject.awesomechat.R;
 
 import java.util.ArrayList;
 
-public class AllFriendFragment extends Fragment {
+public class AllFriendFragment extends Fragment implements OnUserClickedListener {
 
     View view;
     Context context;
@@ -59,5 +60,10 @@ public class AllFriendFragment extends Fragment {
 
     void Init(){
         recyclerView = view.findViewById(R.id.recycler_friend_list);
+    }
+
+    @Override
+    public void onUserLongClicked(User user, int position) {
+
     }
 }

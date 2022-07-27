@@ -43,6 +43,7 @@ public class AllFriendAdapter extends RecyclerView.Adapter<AllFriendAdapter.MyHo
         Collections.sort(arrayList, Comparator.comparing(User::getFullName));
         holder.section.setText(arrayList.get(position).getFullName().substring(0, 1));
         holder.friend_name.setText(arrayList.get(position).getFullName());
+        holder.btn_refuse_friend.setVisibility(View.GONE);
         if (position > 0){
             int i = position - 1;
             if (i < arrayList.size() && arrayList.get(position).getFullName().substring(0,1).equals(arrayList.get(i).getFullName().substring(0,1)))
@@ -59,7 +60,7 @@ public class AllFriendAdapter extends RecyclerView.Adapter<AllFriendAdapter.MyHo
 
         TextView section, friend_name;
         CircleImageView avatar_friend;
-        Button btn_add_friend;
+        Button btn_add_friend, btn_refuse_friend;
 
         public MyHolderView(@NonNull View itemView) {
             super(itemView);
@@ -67,6 +68,7 @@ public class AllFriendAdapter extends RecyclerView.Adapter<AllFriendAdapter.MyHo
             friend_name = itemView.findViewById(R.id.friend_name);
             avatar_friend = itemView.findViewById(R.id.avatar_friend);
             btn_add_friend = itemView.findViewById(R.id.btn_add_friend);
+            btn_refuse_friend = itemView.findViewById(R.id.btn_refuse_friend);
         }
 
         public TextView getSection() {

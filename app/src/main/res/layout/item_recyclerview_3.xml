@@ -19,11 +19,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="15dp"
-
+        android:layout_below="@+id/section"
         android:layout_marginStart="20dp"
-        android:layout_below="@+id/section">
+
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/avatar_friend"
@@ -51,9 +51,21 @@
             android:id="@+id/btn_add_friend"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@+id/btn_refuse_friend"
             android:background="@drawable/button_primary_background"
+            android:text="Kết bạn"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_refuse_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/button_negative_background"
+            app:backgroundTint="@android:color/holo_red_light"
             android:text="Kết bạn"
             android:textColor="@color/white"
             android:textSize="14sp" />
