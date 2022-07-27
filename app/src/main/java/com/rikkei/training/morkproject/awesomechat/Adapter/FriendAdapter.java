@@ -45,7 +45,7 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.MyHolderVi
         holder.friend_name.setText(arrayList.get(position).getFullName());
         if (position > 0){
             int i = position - 1;
-            if (i < arrayList.size() && arrayList.get(position).getFullName().substring(0,1).equals(arrayList.get(i).getFullName().substring(0,1)))
+            if ( arrayList.get(position).getFullName().substring(0,1).equals(arrayList.get(i).getFullName().substring(0,1)))
                 holder.getSection().setVisibility(TextView.GONE);
         }
     }
