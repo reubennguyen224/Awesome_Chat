@@ -42,9 +42,9 @@ public class LoginFragment extends Fragment {
                 assert getFragmentManager() != null;
                 getFragmentManager().beginTransaction().replace(R.id.home_container, new RegisterFragment(context)).addToBackStack("RegisterFragment").commit();
             }
-        });
+        }); //chuyen man hinh dang ky
 
-        txtPassword.getEditText().addTextChangedListener(new CustomTextListener());
+        txtPassword.getEditText().addTextChangedListener(new CustomTextListener()); //kich hoat nut login khi du du dieu kiẹn
 
         btnLogin.setOnClickListener(v -> {
             getFragmentManager().beginTransaction().replace(R.id.home_container, new HomeFragment(context)).addToBackStack("HomeFragment").commit();
@@ -59,6 +59,7 @@ public class LoginFragment extends Fragment {
         txtEmail = view.findViewById(R.id.txtEmail);
         btnLogin = view.findViewById(R.id.btnLogin);
     }
+
 
     class CustomTextListener implements TextWatcher{
 
