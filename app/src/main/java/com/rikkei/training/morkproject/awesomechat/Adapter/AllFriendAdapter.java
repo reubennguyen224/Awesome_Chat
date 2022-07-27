@@ -37,15 +37,8 @@ public class AllFriendAdapter extends RecyclerView.Adapter<AllFriendAdapter.MyHo
     @Override
     public MyHolderView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v;
-        if (viewType == SHOW_MENU){
-            v = LayoutInflater.from(context).inflate(R.layout.item_recyclerview_3, parent, false);
-            return new MyHolderView(v);
-        } else{
-            v = LayoutInflater.from(context).inflate(R.layout.item_recyclerview_3, parent, false);
-            return new MyHolderView(v);
-        }
-
-
+        v = LayoutInflater.from(context).inflate(R.layout.item_recyclerview_3, parent, false);
+        return new MyHolderView(v);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
