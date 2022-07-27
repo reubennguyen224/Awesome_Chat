@@ -25,7 +25,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="100dp"
-            android:text="Bạn bè"
+            android:text="@string/friend_title"
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -36,7 +36,7 @@
             android:layout_height="35dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="190dp"
+            android:layout_marginStart="220dp"
             android:layout_marginTop="100dp"
             android:layout_marginEnd="20dp"
             android:layout_toEndOf="@+id/toolbar_title"
